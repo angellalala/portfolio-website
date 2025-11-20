@@ -1,0 +1,151 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'poppins', sans-serif;
+    background: rgb(220, 230, 233)
+}
+
+nav{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 80px;
+    background-color: rgb(14, 2, 24);
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:white;
+}
+
+.logo span{
+    color:rgb(145, 80, 207)
+}
+
+.nav-links{ 
+    display:flex;
+    gap:20px;
+    list-style: none; /*removes bullet points*/
+}
+
+.nav-links a{ 
+    text-decoration: none;
+    color: #ccc;
+    font-size:17px;
+    transition:color 0.3s;
+}
+
+.nav-links a:hover{
+    color:rgb(145, 80, 207);
+}
+
+.contact-btn{
+    background-color: rgb(145, 80, 207);
+    color:#ccc;
+    padding:12px 30px;
+    border-radius: 5px;
+    border:none;
+    font-size: 16px;
+    cursor: pointer;/*it shows that its clickable*/
+    
+}
+
+.contact-btn:hover{
+    background-color:rgb(130, 65, 192);
+    transform:translateY(-2px); /*move 2px to up*/
+}
+
+.hero{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;/*space between the two sections that are in hero*/
+    /* padding:80px 80px; */
+    max-width: 75%;
+    margin: auto;
+    min-height: calc(100vh - 160px); /*viewport height - nav height*/
+}
+
+.hero-content{
+    max-width:600px; 
+}
+
+.hero-content h2{
+    font-size: 48px;
+    color: rgb(14, 2, 24);
+    margin-top: 10px;
+}
+
+.hero-content h1{
+    font-size:48px;
+    color: rgb(14, 2, 24);
+    margin-bottom:10px;
+}
+
+.hero-content h1 span{
+    color:rgb(145, 80, 207);
+}
+
+.hero-content h3{
+    font-size:42px;
+    color:rgb(14, 2, 24);
+    margin-bottom: 30px
+}
+
+.hero-content p{
+    font-size:18px;
+    color:rgb(14, 2, 24);
+    margin-bottom: 40px;
+    line-height: 1.5;
+}
+
+.hero-buttons{ /*container for buttons placements*/
+    display:flex;
+    gap:40px;
+}
+
+.btn{ /*styles for buttons*/
+    border:none;
+    padding:15px 20px;
+    border-radius: 8px;
+    font-size:18px;
+    cursor: pointer;
+    transition: backgroung-color 0.3s ease; /*ease makes it smooth*/
+}
+
+.btn-primary{
+    background-color: rgb(158, 93, 218);
+    color: white;
+}
+
+.btn-primary:hover{
+    background-color: rgb(130, 65, 192);
+    transform: translateY(-2px);
+}
+.btn-secondary{
+    background-color: rgb(14, 2, 24);
+    color:white;
+}
+
+.btn-secondary:hover{
+    background-color:rgba(0, 0, 0, 0.777);
+    transform: translateY(-2px);
+}
+
+.hero-image{
+    position: relative;
+}
+
+hero-image img{
+    width:450px;
+    height:450px;
+    border-radius:50%;
+    object-fit: cover; /*to cover the entire box*/
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    border: 8px solid white; 
+}
+
