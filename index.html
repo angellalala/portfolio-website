@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
 </head>
 <body>
+
+    <!--header-->
     <nav>
             <div class="logo">
                 <span>ANG</span>ELA
@@ -23,7 +27,7 @@
             <button class="contact-btn">Contact Me</button>
     </nav>
 
-
+    <!--main section-->
     <section class="hero">
         <div class="hero-content">
             <h2>Hi</h2>
@@ -37,31 +41,71 @@
             </div>
         </div>
 
-
+        <!--imgae-->
         <div class="hero-image">
             <img src="/avatar.png" alt="Image of a penguin dressed as a developer" width="350">
         </div>
     </section>
 
-    
+    <!--skills section-->
     <section class="skills" id="skills">
         <div class="skills-content">
-            <h2>My skills</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis, ducimus modi voluptatum dolorem labore quidem numquam ratione reiciendis, adipisci ipsum pariatur! Recusandae itaque porro incidunt explicabo odit ratione! Recusandae, quae.</p>
+            <h2>My Skills</h2>
+            <p>Here are the technologies and skills I use to work as a frontend developer currently and provide a better web experience.</p>
+
+            <div class="skills-bars"> <!-- contains all the skill items like a big box-->
+
+                <!--skill item 1-->
+                <div class="skill-item"> <!-- contains a single skill item-->
+                    <div class="skill-info"> <!-- contains the skill name and percentage-->
+                        <span class="skill-name">HTML5</span>
+                        <span class="skill-percentage">90%</span>
+                    </div>
+                    <div class="skill-bar"> <!-- contains the skill progress bar-->
+                        <div class="skill-progress" data-progress="90"></div> <!--javascript will use data-progress to set the width of this div-->
+                    </div>
+                </div>
+
+                <!--skill item 2-->
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">CSS3</span>
+                        <span class="skill-percentage">85%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="85"></div>
+                    </div>
+                </div>
+
+                <!--skill item 3-->
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">JavaScript</span>
+                        <span class="skill-percentage">75%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="75"></div>
+                    </div>
+                </div>
+
+                <!--skill item 4-->
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">Git & GitHub</span>
+                        <span class="skill-percentage">80%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="80"></div>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </section>
+
+    <!--JS-->
+    <script src="script.js"></script>
     
-    <div class="projects">
-        <h2>My Projects</h2>
-        <div class="projects-button">
-            <button class="btn project1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt, unde vero iusto? adipisicing elit. Deserunt, unde vero iusto?</button>
-
-            <button class="btn project2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum esse earum non consectetur maiores?</button>
-
-            <button class="btn project3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor eveniet temporibus aspernatur mollitia.
-            </button>
-        </div>
-    </div>
 
 </body>
 </html>
