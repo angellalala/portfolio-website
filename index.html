@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,23 +9,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
 </head>
+
 <body>
 
     <!--header-->
     <nav>
-            <div class="logo">
-                <span>ANG</span>ELA
-            </div>
+        <div class="logo">
+            <span>ANG</span>ELA
+        </div>
 
-            <ul class="nav-links">
-                <li><a href="#" class="active"></a>Portfolio</li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Experiences</a></li>
-                <li><a href="#">Education</a></li>
-                <li><a href="#">Blog</a></li>
-            </ul>
+        <ul class="nav-links">
+            <li><a href="#" class="active"></a>Portfolio</li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Experiences</a></li>
+            <li><a href="#">Education</a></li>
+            <li><a href="#">Blog</a></li>
+        </ul>
 
-            <button class="contact-btn">Contact Me</button>
+        <button class="contact-btn">Contact Me</button>
     </nav>
 
     <!--main section-->
@@ -33,7 +35,9 @@
             <h2>Hi</h2>
             <h1>I'm <span>Angela</span></h1>
             <h3>a Frontend Developer</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi consequatur est vero voluptates, rerum quis ex quos ipsum illo sequi? Culpa voluptates harum sequi ut, minima quis? Asperiores, corporis repellat.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi consequatur est vero voluptates, rerum
+                quis ex quos ipsum illo sequi? Culpa voluptates harum sequi ut, minima quis? Asperiores, corporis
+                repellat.</p>
 
             <div class="hero-buttons">
                 <button class="btn btn-primary">Hire Me</button>
@@ -51,7 +55,8 @@
     <section class="skills" id="skills">
         <div class="skills-content">
             <h2>My Skills</h2>
-            <p>Here are the technologies and skills I use to work as a frontend developer currently and provide a better web experience.</p>
+            <p>Here are the technologies and skills I use to work as a frontend developer currently and provide a better
+                web experience.</p>
 
             <div class="skills-bars"> <!-- contains all the skill items like a big box-->
 
@@ -62,7 +67,8 @@
                         <span class="skill-percentage">90%</span>
                     </div>
                     <div class="skill-bar"> <!-- contains the skill progress bar-->
-                        <div class="skill-progress" data-progress="90"></div> <!--javascript will use data-progress to set the width of this div-->
+                        <div class="skill-progress" data-progress="90"></div>
+                        <!--javascript will use data-progress to set the width of this div-->
                     </div>
                 </div>
 
@@ -103,9 +109,38 @@
         </div>
     </section>
 
-    <!--JS-->
+    <!--contact form-->
+    <section class="contact-form" id="contact">
+        <h2>Contact Me</h2>
+
+        <form class="contact-form" method="POST">
+            <div class="form-group">
+                <label class="contact-name" for="name">Name: </label>
+                <input class="contact-name" id="name" name="name" placeholder="Jon Doe" required />
+            </div>
+
+            <div class="form-group">
+                <label class="contact-email" for="email">Email: </label>
+                <input class="contact-email" id="email" name="email" placeholder="youremail@gmail.com" required />
+            </div>
+
+            <div class="form-group">
+                <label class="contact-message" for="message">Message: </label>
+                <textarea class="contact-message" id="message" name="message"> </textarea>
+            </div>
+
+            <!--submit button-->
+            <div class="submit-button">
+                <button  class="submit primary-color">Submit</button>
+            </div>
+
+        </form>
+    </section>
+
+    <!--JavaScript-->
     <script src="script.js"></script>
-    
+
 
 </body>
+
 </html>
