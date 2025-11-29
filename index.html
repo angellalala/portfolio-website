@@ -4,142 +4,397 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Portfolio - Angela</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
 
-    <!--header-->
-    <nav>
-        <div class="logo">
-            <span>ANG</span>ELA
-        </div>
-
-        <ul class="nav-links">
-            <li><a href="#" class="active"></a>Portfolio</li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Experiences</a></li>
-            <li><a href="#">Education</a></li>
-            <li><a href="#">Blog</a></li>
-        </ul>
-
-        <button class="contact-btn">Contact Me</button>
-    </nav>
-
-    <!--main section-->
-    <section class="hero">
-        <div class="hero-content">
-            <h2>Hi</h2>
-            <h1>I'm <span>Angela</span></h1>
-            <h3>a Frontend Developer</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi consequatur est vero voluptates, rerum
-                quis ex quos ipsum illo sequi? Culpa voluptates harum sequi ut, minima quis? Asperiores, corporis
-                repellat.</p>
-
-            <div class="hero-buttons">
-                <button class="btn btn-primary">Hire Me</button>
-                <button class="btn btn-secondary">Experience</button>
+    <!-- Header with Navigation -->
+    <header>
+        <nav>
+            <div class="logo">
+                <span>ANG</span>ELA
             </div>
-        </div>
 
-        <!--imgae-->
-        <div class="hero-image">
-            <img src="/avatar.png" alt="Image of a penguin dressed as a developer" width="350">
-        </div>
-    </section>
+            <ul class="nav-links">
+                <li><a href="#hero" class="active">Portfolio</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#slider">Slider</a></li>
+                <li><a href="#media">Media</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
 
-    <!--skills section-->
-    <section class="skills" id="skills">
-        <div class="skills-content">
-            <h2>My Skills</h2>
-            <p>Here are the technologies and skills I use to work as a frontend developer currently and provide a better
+            <div class="nav-right">
+                <!-- Dark Mode Toggle -->
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <span class="sun-icon">☀️</span>
+                    <span class="moon-icon">🌙</span>
+                </button>
+                
+                <button class="contact-btn" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Contact Me</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="hero-content">
+                <h2>Hi</h2>
+                <h1>I'm <span>Angela</span></h1>
+                <p class="hero-subtitle">a Frontend Developer</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi consequatur est vero voluptates, rerum
+                    quis ex quos ipsum illo sequi? Culpa voluptates harum sequi ut, minima quis? Asperiores, corporis
+                    repellat.</p>
+
+                <div class="hero-buttons">
+                    <button class="btn btn-primary">Hire Me</button>
+                    <button class="btn btn-secondary">Experience</button>
+                </div>
+            </div>
+
+            <!-- Hero Image -->
+            <div class="hero-image">
+                <img src="/avatar.png" alt="Image of a penguin dressed as a developer" width="350">
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills" id="skills">
+            <div class="skills-content">
+                <h2>My Skills</h2>
+                <p>Here are the technologies and skills I use to work as a frontend developer currently and provide a better
                 web experience.</p>
 
-            <div class="skills-bars"> <!-- contains all the skill items like a big box-->
+                <div class="skills-bars">
 
-                <!--skill item 1-->
-                <div class="skill-item"> <!-- contains a single skill item-->
-                    <div class="skill-info"> <!-- contains the skill name and percentage-->
-                        <span class="skill-name">HTML5</span>
-                        <span class="skill-percentage">90%</span>
+                    <!-- Skill Item 1 -->
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">HTML5</span>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="90"></div>
+                        </div>
                     </div>
-                    <div class="skill-bar"> <!-- contains the skill progress bar-->
-                        <div class="skill-progress" data-progress="90"></div>
-                        <!--javascript will use data-progress to set the width of this div-->
+
+                    <!-- Skill Item 2 -->
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">CSS3</span>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="85"></div>
+                        </div>
                     </div>
+
+                    <!-- Skill Item 3 -->
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">JavaScript</span>
+                            <span class="skill-percentage">75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="75"></div>
+                        </div>
+                    </div>
+
+                    <!-- Skill Item 4 -->
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Git & GitHub</span>
+                            <span class="skill-percentage">80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="80"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects" id="projects">
+            <div class="projects-content">
+                <h2>My Projects</h2>
+                <p>Check out some of my recent work. Click on any project to view it live.</p>
+
+                <div class="projects-grid">
+
+                    <!-- Project Card 1 -->
+                    <div class="project-card" data-url="https://github.com">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/400x250/9150CF/ffffff?text=Project+1" alt="Project 1">
+                        </div>
+                        <div class="project-info">
+                            <h3>E-Commerce Website</h3>
+                            <p>A fully responsive online shopping platform built with HTML, CSS, and JavaScript.</p>
+                            <div class="project-tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 2 -->
+                    <div class="project-card" data-url="https://codepen.io">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/400x250/8251C0/ffffff?text=Project+2" alt="Project 2">
+                        </div>
+                        <div class="project-info">
+                            <h3>Weather Dashboard</h3>
+                            <p>Real-time weather application using API integration and dynamic data display.</p>
+                            <div class="project-tags">
+                                <span class="tag">API</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">CSS Grid</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 3 -->
+                    <div class="project-card" data-url="https://developer.mozilla.org">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/400x250/9150CF/ffffff?text=Project+3" alt="Project 3">
+                        </div>
+                        <div class="project-info">
+                            <h3>Task Management App</h3>
+                            <p>Interactive to-do list with local storage persistence and drag-and-drop features.</p>
+                            <div class="project-tags">
+                                <span class="tag">React</span>
+                                <span class="tag">LocalStorage</span>
+                                <span class="tag">UI/UX</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 4 -->
+                    <div class="project-card" data-url="https://www.freecodecamp.org">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/400x250/8251C0/ffffff?text=Project+4" alt="Project 4">
+                        </div>
+                        <div class="project-info">
+                            <h3>Portfolio Template</h3>
+                            <p>Modern and customizable portfolio template for developers and designers.</p>
+                            <div class="project-tags">
+                                <span class="tag">HTML5</span>
+                                <span class="tag">SCSS</span>
+                                <span class="tag">Responsive</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Image Slider Section -->
+        <section class="slider-section" id="slider">
+            <div class="slider-content">
+                <h2>Project Showcase Slider</h2>
+                <p>Browse through my latest work and achievements</p>
+
+                <div class="slider-container">
+                    
+                    <!-- Slider Wrapper -->
+                    <div class="slider-wrapper">
+                        
+                        <!-- Slide 1 -->
+                        <div class="slide active">
+                            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&h=600&fit=crop" alt="Web Development">
+                            <div class="slide-caption">
+                                <h3>Responsive Web Design</h3>
+                                <p>Building modern, mobile-first websites with clean code</p>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="slide">
+                            <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200&h=600&fit=crop" alt="Coding">
+                            <div class="slide-caption">
+                                <h3>Full Stack Development</h3>
+                                <p>Creating seamless user experiences from frontend to backend</p>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="slide">
+                            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&h=600&fit=crop" alt="Programming">
+                            <div class="slide-caption">
+                                <h3>JavaScript Applications</h3>
+                                <p>Interactive and dynamic web applications with modern frameworks</p>
+                            </div>
+                        </div>
+
+                        <!-- Slide 4 -->
+                        <div class="slide">
+                            <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=1200&h=600&fit=crop" alt="Code Editor">
+                            <div class="slide-caption">
+                                <h3>Clean Code Practices</h3>
+                                <p>Writing maintainable, scalable, and efficient code</p>
+                            </div>
+                        </div>
+
+                        <!-- Slide 5 -->
+                        <div class="slide">
+                            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&h=600&fit=crop" alt="Laptop Code">
+                            <div class="slide-caption">
+                                <h3>UI/UX Design</h3>
+                                <p>Crafting beautiful and intuitive user interfaces</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Navigation Buttons -->
+                    <button class="slider-btn prev-btn" id="prevBtn">
+                        <span>❮</span>
+                    </button>
+                    <button class="slider-btn next-btn" id="nextBtn">
+                        <span>❯</span>
+                    </button>
+
+                    <!-- Dots/Indicators -->
+                    <div class="slider-dots" id="sliderDots">
+                        <!-- Dots will be generated by JavaScript -->
+                    </div>
+
                 </div>
 
-                <!--skill item 2-->
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span class="skill-name">CSS3</span>
-                        <span class="skill-percentage">85%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-progress="85"></div>
-                    </div>
-                </div>
-
-                <!--skill item 3-->
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span class="skill-name">JavaScript</span>
-                        <span class="skill-percentage">75%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-progress="75"></div>
-                    </div>
-                </div>
-
-                <!--skill item 4-->
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span class="skill-name">Git & GitHub</span>
-                        <span class="skill-percentage">80%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-progress="80"></div>
-                    </div>
+                <!-- Slider Controls -->
+                <div class="slider-controls">
+                    <button class="control-btn" id="playPauseBtn">⏸ Pause</button>
+                    <span class="slide-counter" id="slideCounter">1 / 5</span>
                 </div>
 
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!--contact form-->
-    <section class="contact-form" id="contact">
-        <h2>Contact Me</h2>
+        <!-- HTML5 Media Section -->
+        <section class="media-section" id="media">
+            <div class="media-content">
+                <h2>HTML5 Media Showcase</h2>
+                <p>Explore modern HTML5 capabilities with video, audio, and interactive canvas.</p>
 
-        <form class="contact-form" method="POST">
-            <div class="form-group">
-                <label class="contact-name" for="name">Name: </label>
-                <input class="contact-name" id="name" name="name" placeholder="Jon Doe" required />
+                <div class="media-grid">
+
+                    <!-- Video Section -->
+                    <div class="media-item">
+                        <div class="media-header">
+                            <h3>📹 Video Player</h3>
+                            <p>HTML5 native video with custom controls</p>
+                        </div>
+                        <div class="media-container">
+                            <video id="portfolioVideo" controls preload="metadata" poster="https://via.placeholder.com/640x360/9150CF/ffffff?text=Video+Thumbnail">
+                                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                                <source src="https://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="media-info">
+                                <p>✓ Supports multiple formats (MP4, WebM, Ogg)</p>
+                                <p>✓ Built-in controls and accessibility</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Audio Section -->
+                    <div class="media-item">
+                        <div class="media-header">
+                            <h3>🎵 Audio Player</h3>
+                            <p>Background music or podcast player</p>
+                        </div>
+                        <div class="media-container">
+                            <audio id="portfolioAudio" controls preload="metadata">
+                                <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+                                <source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg">
+                                Your browser does not support the audio element.
+                            </audio>
+                            <div class="media-info">
+                                <p>✓ Multiple audio format support</p>
+                                <p>✓ Playback controls and volume adjustment</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Canvas Section -->
+                    <div class="media-item canvas-item">
+                        <div class="media-header">
+                            <h3>🎨 Interactive Canvas</h3>
+                            <p>Draw and create with HTML5 Canvas</p>
+                        </div>
+                        <div class="media-container">
+                            <canvas id="drawingCanvas" width="600" height="300"></canvas>
+                            <div class="canvas-controls">
+                                <button class="canvas-btn" id="clearCanvas">Clear Canvas</button>
+                                <button class="canvas-btn" id="drawCircle">Draw Circle</button>
+                                <button class="canvas-btn" id="drawSquare">Draw Square</button>
+                                <button class="canvas-btn" id="drawText">Draw Text</button>
+                                <input type="color" id="colorPicker" value="#9150CF" title="Choose color">
+                            </div>
+                            <div class="media-info">
+                                <p>✓ Dynamic graphics and animations</p>
+                                <p>✓ Interactive drawing capabilities</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
+        </section>
 
-            <div class="form-group">
-                <label class="contact-email" for="email">Email: </label>
-                <input class="contact-email" id="email" name="email" placeholder="youremail@gmail.com" required />
-            </div>
+        <!-- Contact Form Section -->
+        <section class="contact-section" id="contact">
+            <h2>Contact Me</h2>
 
-            <div class="form-group">
-                <label class="contact-message" for="message">Message: </label>
-                <textarea class="contact-message" id="message" name="message"> </textarea>
-            </div>
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Jon Doe" required />
+                    <span class="error-message" id="nameError"></span>
+                </div>
 
-            <!--submit button-->
-            <div class="submit-button">
-                <button  class="submit primary-color">Submit</button>
-            </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="youremail@gmail.com" required />
+                    <span class="error-message" id="emailError"></span>
+                </div>
 
-        </form>
-    </section>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <span class="error-message" id="messageError"></span>
+                </div>
 
-    <!--JavaScript-->
+                <!-- Submit Button -->
+                <div class="submit-button">
+                    <button type="submit" class="submit primary-color">Submit</button>
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Angela. All rights reserved.</p>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        ↑
+    </button>
+
+    <!-- JavaScript -->
     <script src="script.js"></script>
-
 
 </body>
 

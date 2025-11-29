@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submission Details</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        .details-container {
+            max-width: 700px;
+            margin: 80px auto;
+            padding: 40px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .success-message {
+            background: linear-gradient(135deg, rgb(145, 80, 207), rgb(180, 130, 230));
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .success-message h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        
+        .details-card {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .detail-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+        
+        .detail-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .detail-label {
+            font-weight: 600;
+            color: rgb(145, 80, 207);
+            font-size: 18px;
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        .detail-value {
+            color: rgb(14, 2, 24);
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        
+        .button-group {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .btn {
+            flex: 1;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-back {
+            background: rgb(145, 80, 207);
+            color: white;
+        }
+        
+        .btn-back:hover {
+            background: rgb(130, 65, 192);
+            transform: translateY(-2px);
+        }
+        
+        .btn-clear {
+            background: rgb(14, 2, 24);
+            color: white;
+        }
+        
+        .btn-clear:hover {
+            background: rgba(0, 0, 0, 0.777);
+            transform: translateY(-2px);
+        }
+        
+        .error-container {
+            text-align: center;
+            padding: 60px 20px;
+        }
+        
+        .error-message-text {
+            color: #dc3545;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <div class="details-container">
+            
+            <!-- This will be populated by JavaScript -->
+            <div id="contentArea"></div>
+            
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const contentArea = document.getElementById('contentArea');
+            
+            // Retrieve data from localStorage
+            const storedData = localStorage.getItem('contactFormData');
+            
+            if (storedData) {
+                // Parse the JSON data
+                const formData = JSON.parse(storedData);
+                
+                // Display success message and form details
+                contentArea.innerHTML = `
+                    <div class="success-message">
+                        <h1>Form Submitted Successfully!</h1>
+                        <p>Thank you for reaching out. We've received your message.</p>
+                    </div>
+                    
+                    <div class="details-card">
+                        <h2 style="color: rgb(145, 80, 207); margin-bottom: 25px; font-size: 28px;">Submission Details</h2>
+                        
+                        <div class="detail-item">
+                            <span class="detail-label">Name:</span>
+                            <span class="detail-value">${formData.name}</span>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <span class="detail-label">Email:</span>
+                            <span class="detail-value">${formData.email}</span>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <span class="detail-label">Message:</span>
+                            <span class="detail-value">${formData.message}</span>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <span class="detail-label">Submitted At:</span>
+                            <span class="detail-value">${formData.submittedAt}</span>
+                        </div>
+                    </div>
+                    
+                    <div class="button-group">
+                        <button class="btn btn-back" onclick="goBack()">Back to Portfolio</button>
+                        <button class="btn btn-clear" onclick="clearData()">Clear Data</button>
+                    </div>
+                `;
+            } else {
+                // Display error if no data found
+                contentArea.innerHTML = `
+                    <div class="error-container">
+                        <div class="error-message-text">⚠ No form data found!</div>
+                        <p style="color: #666; margin-bottom: 20px;">Please submit the contact form first.</p>
+                        <button class="btn btn-back" onclick="goBack()">Go to Contact Form</button>
+                    </div>
+                `;
+            }
+        });
+        
+        // Function to go back to the main page
+        function goBack() {
+            window.location.href = 'index.html';
+        }
+        
+        // Function to clear localStorage data
+        function clearData() {
+            if (confirm('Are you sure you want to clear the form data?')) {
+                localStorage.removeItem('contactFormData');
+                alert('Data cleared successfully!');
+                window.location.href = 'index.html';
+            }
+        }
+    </script>
+
+</body>
+</html>
